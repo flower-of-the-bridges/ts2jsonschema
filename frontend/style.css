@@ -1,0 +1,41 @@
+html,
+body {
+  height: 100%;
+  margin: 0px;
+}
+
+header {
+  text-align: center;
+}
+
+#container {
+  position: fixed;
+  top: 120px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #4c71c1;
+  padding: 10px;
+  margin: 0px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: stretch;
+}
+
+#convert {
+  margin-top: 20%;
+  height: 100px;
+  border-radius: 2px;
+}
+
+.item {
+  background-color: #efefef;
+  flex-grow: 1;
+  width: 50%;
+}
+
+.item + .item {
+  margin-left: 10px;
+}

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <header>
+      <h1>TS 2 JSON-Schema</h1>
+      <body>
+        Web page that converts typescript definitions into json schemas, using <a href="https://github.com/vega/ts-json-schema-generator" target="_blank">ts-json-schema-generator</a> under the hood.
+      </body>
+    </header>
+    <div id="container">
+      <div id="typescript" class="item"></div>
+      <button id="convert">Convert to <br/>JSON Schema</button>
+      <div id="json" class="item"></div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
