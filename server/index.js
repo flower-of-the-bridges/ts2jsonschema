@@ -17,10 +17,11 @@ const handler = async (request, reply) => {
     return reply.status(400).send()
   }
   
+  log.info({code}, 'writing code to file.')
   const tempFilePath = await temp.template('%s.ts').writeFile(code, { encoding: 'utf-8' });
 
   try {
-    
+    log.info( { tempFilePath }, 'starting generation from file')
     const generator = createGenerator({
       path: tempFilePath,
       type: "*"
