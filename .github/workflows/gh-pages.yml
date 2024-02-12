@@ -39,7 +39,7 @@ jobs:
         run: npm install
       - name: Build
         env:
-          VITE_SERVER_URL: ${{ env.VITE_SERVER_URL }}
+          VITE_BACKEND_URL: ${{ env.VITE_BACKEND_URL }}
         run: npm run build --workspace=frontend
       - name: Setup Pages
         uses: actions/configure-pages@v3

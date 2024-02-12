@@ -10,7 +10,7 @@ export interface User {
 }
 `.trim()
 
-const { VITE_SERVER_URL = 'http://localhost:3000/' } = import.meta.env
+const { VITE_BACKEND_URL = 'http://localhost:3000/' } = import.meta.env
 
 const typescriptEditor = getEditor(document.getElementById('typescript'), {
   value: exampleCode,
@@ -28,7 +28,7 @@ const convertButton = document.getElementById('convert')
 convertButton.addEventListener('click', () => {
 	convertButton.disabled = true
 	
-	axios.post(VITE_SERVER_URL, { code: typescriptEditor.getValue()}).then(({data}) => {
+	axios.post(VITE_BACKEND_URL, { code: typescriptEditor.getValue()}).then(({data}) => {
 		console.log('received json schema: %o', data)
 		jsonSchemaEditor.setValue(JSON.stringify(data, null, 2))
 	})
