@@ -40,7 +40,7 @@ jobs:
       - name: Build
         env:
           VITE_BACKEND_URL: ${{ env.VITE_BACKEND_URL }}
-        run: npm run build --workspace=frontend
+        run: VITE_BACKEND_URL=${{ env.VITE_BACKEND_URL }} npm run build --workspace=frontend
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
